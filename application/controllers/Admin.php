@@ -34,7 +34,9 @@
 
             $crud->add_fields('Name','Category','Price','Quantity','Pic');
             $crud->edit_fields('Name','Category','Price','Quantity','Pic');
-            
+
+            $crud->required_fields('ProductID','Name', 'Category', 'Price', 'Quantity', 'Pic');
+            $crud->unset_delete();
             $output = $crud->render();
             $data['crud'] = get_object_vars($output);
         

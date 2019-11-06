@@ -194,13 +194,20 @@
             $data['script'] = $this->load->view('includes/script',NULL,TRUE);
                 $data['navbar'] = $this->load->view('templates/mainheader',$data,TRUE);
                 $data['footer'] = $this->load->view('templates/footer',NULL,TRUE);
+                $data['style'] = $this->load->view('includes/style',NULL,TRUE);
 
             if(!empty($data['carts'])){
-                $data['style'] = $this->load->view('includes/style',NULL,TRUE);
+                if(!empty($data['address']))
+                {
+               
                 
 
                 $this->session->set_userdata('confirm', TRUE);
                 $this->load->view('pages/main/checkOut.php',$data);
+                }
+                else{
+                    $this->editProfile();
+                }
                 
             }else{
                 $data['error'] = 'Please add an item to your cart';

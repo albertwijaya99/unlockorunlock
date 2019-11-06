@@ -97,7 +97,7 @@
         <?php endforeach;?>
         <?php if(!$i){
             echo "<br><br><br><br>
-            <div class='col-xl-12 col-md-12 pl-md-5 pl-xl-5 row justify-content-around'><div class='text-center'><h1>You Have no History.<br>Let's <a href='".base_url()."main/products/all' style='color:#3399ff;text-decoration:none;'>Make History</a> with us!</h1></div></div>";
+            <div class='col-xl-12 col-md-12 pl-md-5 pl-xl-5 row justify-content-around'><div class='text-center'><h1>You Have no History.<br>Let's <a href='".base_url()."main/products/all' style='color:#3399ff;'>Make History</a> with us!</h1></div></div>";
         }?>
 		<!-- END LIST PRODUCT IN CART -->
 
