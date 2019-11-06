@@ -26,6 +26,7 @@
                 $data['style'] = $this->load->view('includes/style',NULL,TRUE);
                 $data['header'] = $this->load->view('templates/headerCMS',NULL,TRUE);
                 $data['script'] = $this->load->view('includes/script',NULL,TRUE);
+                $data['sidenav'] = $this->load->view('includes/sidenav',NULL,TRUE);
                 $data['footer'] = $this->load->view('templates/footer',NULL,TRUE);
                 
                 $this->load->view('pages/admin/dashboard.php',$data);
@@ -62,6 +63,7 @@
                 $data['header'] = $this->load->view('templates/headerCMS',NULL,TRUE);
                 $data['script'] = $this->load->view('includes/script',NULL,TRUE);
                 $data['footer'] = $this->load->view('templates/footer',NULL,TRUE);
+                $data['sidenav'] = $this->load->view('includes/sidenav',NULL,TRUE);
                 
                 $this->load->view('pages/admin/dashboard.php',$data);
             }
