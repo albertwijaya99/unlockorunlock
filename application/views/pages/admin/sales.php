@@ -15,17 +15,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <?php echo $sidenav;?>
+
 </head>
 <body>
 <?php echo $header;?>
 
-    <div id="mySidenav" class="sidenav">
-        <a id="dashboard" href="<?php echo base_url();?>admin/dashboard"> <img src="<?php echo base_url();?>assets/resources/dashboard.png" alt="dashboard" width="45" height="45">Dashboard</a>
-        <a id ="dataItem" href="<?php echo base_url();?>admin/products"><img src="<?php echo base_url();?>assets/resources/dataItem.png" alt="dataItem" width="40" height="40"> Data Item</a>
-        <a id="salesReport" href="<?php echo base_url();?>admin/sales" style="background-color:#3399ff;color:#FFF"><img src="<?php echo base_url();?>assets/resources/salesReport.png" alt="salesReport" width="40" height="40"> Sales Report</a>
-        <a href="<?php echo base_url();?>login/logout"><img src="<?php echo base_url();?>assets/resources/logout.png" alt="dashboard" width="35" height="35"> Logout</a>
-    </div>
+<?php echo $sidenav;?>
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky pt-xl-4">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>admin/dashboard" >
+                  <span class="fa fa-home"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>admin/products" >
+                  <span class="fa fa-shopping-cart"></span>
+                  Data Item
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url();?>admin/sales" >
+                  <span class="fa fa-file"></span>
+                  Sales Report
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>login/logout" >
+                  <span class="fa fa-user"></span>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
     <div id="main">
         <table id="example" class="table table-striped table-bordered" style="width:100%">

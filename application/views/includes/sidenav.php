@@ -1,47 +1,59 @@
-<?php
-  defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <style>
-    .sidenav {
-  height: 100%;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  background-color: #FFF;
-  overflow-x: hidden;
-  transition: 0.5s;
-  border: 1px solid black;
-}
+    body {
+      font-size: .875rem;
+    }
+    /*
+     * Sidebar
+     */ 
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100; /* Behind the navbar */
+      padding: 60px 0 0; /* Height of navbar */
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000;
-  display: block;
-  transition: 0.3s;
-  border-bottom: 1px solid black;
-}
+    .sidebar-sticky {
+      position: relative;
+      top: 0;
+      height: calc(100vh - 48px);
+      padding-top: .5rem;
+      overflow-x: hidden;
+      overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
 
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+      .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+      }
+    }
 
-.sidenav a:hover {
-  color: #3399ff;
-}
+    .sidebar .nav-link {
+      font-weight: 600;
+      color: #333;
+      font-size: 1.25rem;
+    }
 
+    .sidebar .nav-link.active {
+      color: #007bff;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  margin-left:300px;
-}
+    .sidebar-heading {
+      font-size: .75rem;
+      text-transform: uppercase;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+    /*
+     * Content
+     */
+
+    #main {
+      padding-top: 60px; /* Space for fixed navbar */
+      padding: 16px;
+      margin-left:250px;
+      margin-top: 80px;
+    }
 </style>
-
-<script>
-$(".sidenav a").after("<hr>");
-</script>

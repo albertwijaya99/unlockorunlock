@@ -18,21 +18,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Data Item</title>
     <link rel="icon" href="<?php echo base_url()?>assets/resources/ikon.png">
-    <?php echo $sidenav;?>
+    
 </head>
 <body>
     <?php echo $header;?>
-    
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky pt-xl-4">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>admin/dashboard" >
+                  <span class="fa fa-home"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url();?>admin/products" >
+                  <span class="fa fa-shopping-cart"></span>
+                  Data Item
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>admin/sales" >
+                  <span class="fa fa-file"></span>
+                  Sales Report
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>login/logout" >
+                  <span class="fa fa-user"></span>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-    <div id="mySidenav" class="sidenav">
-        <a id="dashboard" href="<?php echo base_url();?>admin/dashboard" > <img src="<?php echo base_url();?>assets/resources/dashboard.png" alt="dashboard" width="45" height="45">Dashboard</a>
-        <a id ="dataItem" href="<?php echo base_url();?>admin/products" style="background-color:#3399ff;color:#FFF"><img src="<?php echo base_url();?>assets/resources/dataItem.png" alt="dataItem" width="40" height="40"> Data Item</a>
-        <a id="salesReport" href="<?php echo base_url();?>admin/sales"><img src="<?php echo base_url();?>assets/resources/salesReport.png" alt="salesReport" width="40" height="40"> Sales Report</a>
-        <a href="<?php echo base_url();?>login/logout"><img src="<?php echo base_url();?>assets/resources/logout.png" alt="dashboard" width="35" height="35"> Logout</a>
-    </div>
-
+    <div class="container-fluid">
+    <?php echo $sidenav;?>
     <div id="main">
         <?php echo $crud['output'];?>
     </div>
+    </div>
+
+    
 </body>
 </html>
